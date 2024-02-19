@@ -1,0 +1,111 @@
+@import url('https://fonts.cdnfonts.com/css/ds-digital');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+    font-family: 'LAB디지털';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/LAB디지털.woff')
+        format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ebecee;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.clock,
+.stopwatch {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 3cqmin;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#clock-time {
+    font-size: 150px;
+    background-color: white;
+    color: #c6c6c8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'LAB디지털', sans-serif;
+    margin-bottom: 30px;
+    width: 980px;
+    height: 180px;
+    border: 11px solid #bdbdbf;
+    border-radius: 20px;
+}
+
+.clock-border {
+    width: 1000px;
+    height: 200px;
+    border-radius: 30px;
+    border: 13px solid #fefefe;
+    box-shadow: 10px 20px 30px #b3b3b5;
+}
+
+#clock-day {
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+}
+
+#change-btn {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    right: -400px;
+    top: 10px;
+    border: none;
+    outline: none;
+    width: 130px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 5px -8px 30px #c6c6c8;
+}
+
+.stopwatch-btns button {
+    background-color: #fff;
+    margin-right: 20px;
+    margin-top: 20px;
+    width: 100px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 5px 5px 5px #c6c6c8;
+    border: none;
+    outline: none;
+}

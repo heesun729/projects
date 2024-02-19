@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>My Watch</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="clock-container">
+            <!-- 상단 제목 부분 -->
+            <header class="clock-header">
+                <h1>Start Stop Watch</h1>
+            </header>
+
+            <!-- 중앙 스탑워치 부분 전체 영역 표시-->
+            <div class="clock">
+                <button type="button" id="change-btn" onclick="location.href='index.html'">
+                    Clock
+                </button>
+
+                <div class="clock-border">
+                    <!-- 분, 초, 미리초 단위의 숫자를 div로 묶어서 분류-->
+                    <div id="clock-time">
+                        <div id="mm">00</div>
+                        <div id="ss">00</div>
+                        <div id="ms">00</div>
+                    </div>
+                </div>
+            </div>
+            <!-- 스탑워치 실행, 중단, 초기화 버튼 -->
+            <div class="stopwatch-btns">
+                <button id="start-btn">START</button>
+                <button id="stop-btn">STOP</button>
+                <button id="reset-btn">RESET</button>
+            </div>
+        </div>
+        <script src="script2.js"></script>
+    </body>
+</html>

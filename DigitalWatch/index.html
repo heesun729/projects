@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>My Watch</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="clock-container">
+            <!-- 상단 제목 부분 -->
+            <header class="clock-header">
+                <h1>What time is it now ?</h1>
+            </header>
+
+            <!-- 중앙 시계, 날짜 표기 부분-->
+            <div class="clock">
+                <button type="button" id="change-btn" onclick="location.href='stopwatch.html'">
+                    Stop Watch
+                </button>
+
+                <div class="clock-border"><div id="clock-time">loading ...</div></div>
+                <div id="clock-day"></div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
