@@ -4,12 +4,19 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Heeseon</title>
-
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+            integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
         <link rel="stylesheet" href="style.css" />
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
         </style>
     </head>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
     <body>
         <header>
             <div class="header-container">
@@ -21,9 +28,9 @@
                 >
                 <div class="header-menu">
                     <ul>
-                        <li><a href="#">ABOUT</a></li>
-                        <li><a href="#">SKILLS</a></li>
-                        <li><a href="#">PROJECTS</a></li>
+                        <li><a href="#scroll1">ABOUT</a></li>
+                        <li><a href="#scroll2">SKILLS</a></li>
+                        <li><a href="#scroll3">PROJECTS</a></li>
                     </ul>
                 </div>
             </div>
@@ -31,17 +38,11 @@
 
         <main class="main-container">
             <div class="content-container">
-                <div class="content-right">
-                    <p class="right-name">HEESEON</p>
-                    <p class="right-job">
-                        Front-end<br />
-                        developer
-                    </p>
-                </div>
+                <img src="assets/name.jpg" class="icons" />
             </div>
         </main>
 
-        <section class="about-container">
+        <section class="about-container" id="scroll1">
             <div class="about">
                 <p class="about-header">ABOUT ME</p>
                 <p class="about-text">Hello. I'm Front-End Developer, Heeseon</p>
@@ -90,7 +91,7 @@
             </div>
         </section>
 
-        <section class="skills-container">
+        <section class="skills-container" id="scroll2">
             <p class="subject-header">SKILLS</p>
             <div class="skill-box front">
                 <p class="skill-txt">FRONT-END</p>
@@ -149,15 +150,15 @@
             </div>
         </section>
 
-        <section class="projects-container">
+        <section class="projects-container" id="scroll3">
             <p class="subject-header">PROJECTS</p>
             <p id="click-text">
                 <span>클</span><span>릭</span>
                 하면 프로젝트를 더 자세히 볼 수 있습니다
             </p>
             <div class="project-box">
-                <div class="boxes box2">
-                    <img src="assets/CARD.gif" />
+                <div class="boxes box2" onclick="showBox(0)">
+                    <img src="assets/uoms.png" />
                     <h1 id="box-h">UOMS</h1>
                     <p>Team Project</p>
                     <p>
@@ -169,7 +170,7 @@
 
                     <p>Node.js, React, DjangoRestFramework</p>
                 </div>
-                <div class="boxes box3">
+                <div class="boxes box3" onclick="showBox(1)">
                     <img src="assets/CARD.gif" />
                     <h1 id="box-h">MyCard</h1>
                     <p>Solo Project</p>
@@ -181,7 +182,7 @@
                     <p class="project-stack">STACK</p>
                     <p>Html, Css</p>
                 </div>
-                <div class="boxes box4">
+                <div class="boxes box4" onclick="showBox(2)">
                     <img src="assets/CARD.gif" />
                     <h1 id="box-h">ToDoApp</h1>
                     <p>Solo Project</p>
@@ -195,31 +196,187 @@
                 </div>
             </div>
             <section class="projects-about-container">
-                <div class="project-about-box" id="box1">
+                <div class="project-about-box" id="box0">
                     <div class="project-left">
                         <img src="assets/Heeseon.gif" alt="portfolio-detail" />
                         <p id="project-name">포트폴리오</p>
                         <p class="project-stack">Repository</p>
-                        <p>https://</p>
+                        <a
+                            href="https://github.com/heesun729/projects/tree/main/Portfolio"
+                            id="repo-url"
+                            target="_blank"
+                        >
+                            https://github.com/heesun729/projects/tree/main/Portfolio</a
+                        >
                     </div>
                     <div class="project-right">
                         <h2>프로젝트 소개</h2>
-                        <p>어쩌구저쩌구소개</p>
+                        <p>
+                            프론트엔드 개발자로서의 역량을 소개하는 포트폴리오 웹사이트를
+                            제작했습니다. 각 메뉴를 선택할 때마다 자연스럽게 이동하는 스크롤 기능을
+                            통해 사용자에게 직관적이고 매끄러운 경험을 제공합니다. 각 섹션은 기술,
+                            경험, 프로젝트 등을 명확하게 구분하여 나의 역량을 강조하고 있습니다.
+                            또한, 디자인적인 부분에서는 세련된 색상과 조화로운 레아웃을 선택하여
+                            전문적인 인상을 전달하고자 노력했습니다.
+                        </p>
                         <h2>후기&교훈</h2>
-                        <p>어쩌구저쩌구후기</p>
+                        <p>
+                            학습 내용안에서 최적의 UI와 기능을 제공하기 위해 노력했습니다. 혼자서
+                            진행하는 웹사이트 개발로, 일정 내에서 레이아웃 디자인의 중요성을 경험할
+                            수 있었습니다. 추후 이미지 스프라이트 기법 등을 적용해 개선할
+                            예정입니다.
+                        </p>
                         <h3>구현 기능</h3>
-                        <p>구현기능기능</p>
+                        <p>스크롤 이동, 간편 이메일</p>
                         <h3>기술 스택</h3>
-                        기술 스택스택
+                        <p>Html, Css, JavaScript</p>
                     </div>
                 </div>
-                <div class="project-about-box" id="box2"></div>
-                <div class="project-about-box" id="box3"></div>
-                <div class="project-about-box" id="box4"></div>
+                <div class="project-about-box" id="box1">
+                    <div class="project-left">
+                        <img src="assets/uoms.png" alt="portfolio-detail" />
+                        <p id="project-name">UOMS</p>
+                        <p class="project-stack">Repository</p>
+                        <a
+                            href="https://github.com/heesun729/matchingOTT"
+                            id="repo-url"
+                            target="_blank"
+                        >
+                            https://github.com/heesun729/matchingOTT</a
+                        >
+                    </div>
+                    <div class="project-right">
+                        <h2>프로젝트 소개</h2>
+                        <p>
+                            프론트엔드 개발자로서의 역량을 소개하는 포트폴리오 웹사이트를
+                            제작했습니다. 각 메뉴를 선택할 때마다 자연스럽게 이동하는 스크롤 기능을
+                            통해 사용자에게 직관적이고 매끄러운 경험을 제공합니다. 각 섹션은 기술,
+                            경험, 프로젝트 등을 명확하게 구분하여 나의 역량을 강조하고 있습니다.
+                            또한, 디자인적인 부분에서는 세련된 색상과 조화로운 레아웃을 선택하여
+                            전문적인 인상을 전달하고자 노력했습니다.
+                        </p>
+                        <h2>후기&교훈</h2>
+                        <p>
+                            학습 내용안에서 최적의 UI와 기능을 제공하기 위해 노력했습니다. 혼자서
+                            진행하는 웹사이트 개발로, 일정 내에서 레이아웃 디자인의 중요성을 경험할
+                            수 있었습니다. 추후 이미지 스프라이트 기법 등을 적용해 개선할
+                            예정입니다.
+                        </p>
+                        <h3>구현 기능</h3>
+                        <p>스크롤 이동, 간편 이메일</p>
+                        <h3>기술 스택</h3>
+                        <p>Html, Css, JavaScript</p>
+                    </div>
+                </div>
+                <div class="project-about-box" id="box2">
+                    <div class="project-left">
+                        <img src="assets/CARD.gif" alt="portfolio-detail" />
+                        <p id="project-name">MyCard</p>
+                        <p class="project-stack">Repository</p>
+                        <a
+                            href="https://github.com/heesun729/projects/tree/main/card"
+                            id="repo-url"
+                            target="_blank"
+                        >
+                            https://github.com/heesun729/projects/tree/main/card</a
+                        >
+                    </div>
+                    <div class="project-right">
+                        <h2>프로젝트 소개</h2>
+                        <p>
+                            프론트엔드 개발자로서의 역량을 소개하는 포트폴리오 웹사이트를
+                            제작했습니다. 각 메뉴를 선택할 때마다 자연스럽게 이동하는 스크롤 기능을
+                            통해 사용자에게 직관적이고 매끄러운 경험을 제공합니다. 각 섹션은 기술,
+                            경험, 프로젝트 등을 명확하게 구분하여 나의 역량을 강조하고 있습니다.
+                            또한, 디자인적인 부분에서는 세련된 색상과 조화로운 레아웃을 선택하여
+                            전문적인 인상을 전달하고자 노력했습니다.
+                        </p>
+                        <h2>후기&교훈</h2>
+                        <p>
+                            학습 내용안에서 최적의 UI와 기능을 제공하기 위해 노력했습니다. 혼자서
+                            진행하는 웹사이트 개발로, 일정 내에서 레이아웃 디자인의 중요성을 경험할
+                            수 있었습니다. 추후 이미지 스프라이트 기법 등을 적용해 개선할
+                            예정입니다.
+                        </p>
+                        <h3>구현 기능</h3>
+                        <p>스크롤 이동, 간편 이메일</p>
+                        <h3>기술 스택</h3>
+                        <p>Html, Css, JavaScript</p>
+                    </div>
+                </div>
+                <div class="project-about-box" id="box3">
+                    <div class="project-left">
+                        <img src="assets/My Watch.gif" alt="portfolio-detail" />
+                        <p id="project-name">ToDoApp</p>
+                        <p class="project-stack">Repository</p>
+                        <a
+                            href="https://github.com/heesun729/projects/tree/main/Portfolio"
+                            id="repo-url"
+                            target="_blank"
+                        >
+                            https://github.com/heesun729/projects/tree/main/Portfolio</a
+                        >
+                    </div>
+                    <div class="project-right">
+                        <h2>프로젝트 소개</h2>
+                        <p>
+                            프론트엔드 개발자로서의 역량을 소개하는 포트폴리오 웹사이트를
+                            제작했습니다. 각 메뉴를 선택할 때마다 자연스럽게 이동하는 스크롤 기능을
+                            통해 사용자에게 직관적이고 매끄러운 경험을 제공합니다. 각 섹션은 기술,
+                            경험, 프로젝트 등을 명확하게 구분하여 나의 역량을 강조하고 있습니다.
+                            또한, 디자인적인 부분에서는 세련된 색상과 조화로운 레아웃을 선택하여
+                            전문적인 인상을 전달하고자 노력했습니다.
+                        </p>
+                        <h2>후기&교훈</h2>
+                        <p>
+                            학습 내용안에서 최적의 UI와 기능을 제공하기 위해 노력했습니다. 혼자서
+                            진행하는 웹사이트 개발로, 일정 내에서 레이아웃 디자인의 중요성을 경험할
+                            수 있었습니다. 추후 이미지 스프라이트 기법 등을 적용해 개선할
+                            예정입니다.
+                        </p>
+                        <h3>구현 기능</h3>
+                        <p>스크롤 이동, 간편 이메일</p>
+                        <h3>기술 스택</h3>
+                        <p>Html, Css, JavaScript</p>
+                    </div>
+                </div>
             </section>
         </section>
 
-        <footer class="footer"></footer>
+        <section class="user-contact">
+            <div class="user-contact-container">
+                <h2>Contact</h2>
+                <form>
+                    <div class="info">
+                        <div class="name">
+                            <label for="name">Name</label>
+                            <input id="name" name="name" type="text" value />
+                        </div>
+                        <div class="email">
+                            <label for="email">E-mail</label>
+                            <input id="email" name="email" type="email" value />
+                        </div>
+                    </div>
+                    <div class="message">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message"></textarea>
+                    </div>
+                </form>
+                <button class="button" onclick="submitForm()">
+                    <div class="text">SEND</div>
+                </button>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer-container">
+                <p>Copyright 2024. 박희선. All rights reserved</p>
+                <div class="footer-icon">
+                    <a href="https://github.com/heesun729">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
         <script src="script.js"></script>
     </body>
 </html>
