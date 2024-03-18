@@ -54,6 +54,7 @@ header h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-shadow: #b6dcff 1px 0 14px;
     font-family: 'LAB디지털', sans-serif;
     margin-bottom: 30px;
     width: 980px;

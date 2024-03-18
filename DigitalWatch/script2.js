@@ -36,7 +36,7 @@ btnReset.onclick = function () {
 // 10ms 마다 시간에 대한 숫자가 증가하는 함수 operateTimer
 function operateTimer() {
     tenMillis++;
-    appendTens.textContent = tenMillis > 9 ? tenMillis : ':0' + tenMillis;
+    appendTens.textContent = tenMillis > 9 ? tenMillis : '0' + tenMillis;
     if (tenMillis > 99) {
         seconds++;
         appendSeconds.textContent = seconds > 9 ? seconds : '0' + seconds;

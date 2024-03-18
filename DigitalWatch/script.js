@@ -27,6 +27,7 @@ function clock() {
         let weekdays = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
         return weekdays[date.getDay()]; // 현재 요일별로 0~6의 값이 나옴. 배열에서 요일을 리턴함
     }
+
     // 시계부분 화면에 출력하는 함수
     function write(year, month, day, hour, minute, second, week) {
         let clockday = document.getElementById('clock-day'); //<div id="clock-day"></div>
@@ -38,5 +39,5 @@ function clock() {
     write(year, month, day, hour, minute, second, week);
 }
 
-//Intervals 매번 일어나는일, 1초마다 clock()을 호출한다
+//Intervals 매번 일어나는일, 0.3초마다 clock()을 호출한다
 setInterval(clock, 300);
